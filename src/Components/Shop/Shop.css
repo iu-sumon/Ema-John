@@ -2,13 +2,10 @@
 {
     display: grid;
     grid-template-columns: 4fr 1fr;
+    
      
 }
-/* .shop-container
-{
-    
-} */
-.products-container
+ .products-container
 {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -16,4 +13,9 @@
     margin-top:118px;
     margin-left: 104px;
     
+}
+.cart-container
+{    position: -webkit-sticky;
+     position: sticky;
+       top: 0;
 }
