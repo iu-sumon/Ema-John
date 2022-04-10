@@ -1,7 +1,9 @@
 import React from 'react';
+ 
 import './Cart.css';
-const Cart = ({ cart }) => {
-    
+const Cart = (props) => {
+    const { cart } = props;
+
     let total = 0;
     let shipping = 0;
     let quantity = 0;
@@ -23,12 +25,9 @@ const Cart = ({ cart }) => {
             <p><small>Total Shipping Charge:</small> ${shipping}</p>
             <p><small>Tax:</small> ${tax}</p>
             <h6 className='grand-total'>Grand Total: ${grandTotal}</h6>
-
-            <div>
-                <button className='btn-delete'>Clear Cart <i className="fa-regular fa-trash-can"></i></button>
-                <button className='btn-review'>Review Order <i className="fa-solid fa-arrow-right-long"></i></button>
-            </div>
-
+            {/* get button from cart component */}
+            {props.children}
+          
         </div>
     );
 };
